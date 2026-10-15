@@ -1,0 +1,33 @@
+run:
+  timeout: 5m
+  tests: true
+  build-tags:
+    - integration
+
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - errcheck
+    - errorlint
+    - gofmt
+    - goimports
+    - gosimple
+    - govet
+    - gocyclo
+    - ineffassign
+    - misspell
+    - nolintlint
+    - staticcheck
+    - unconvert
+    - unused
+
+linters-settings:
+  gocyclo:
+    min-complexity: 24
+  goimports:
+    local-prefixes: github.com/applycoding/go-ride-dispatch
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
